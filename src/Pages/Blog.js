@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import GmailIcon from '@material-ui/icons/Email';
 import Header from '../Components/Header';
 import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
@@ -26,7 +27,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'About me',
+  title: 'Marcial Rico Pozas\' Portfolio ' ,
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
@@ -35,12 +36,16 @@ const mainFeaturedPost = {
 
 const sidebar = {
   title: 'Social',
-
   social: [
     { name: 'GitHub', icon: GitHubIcon , link: 'https://github.com/ricopozasmarcial' },
     { name: 'Twitter', icon: TwitterIcon, link: 'https://twitter.com/marchute99' },
     { name: 'Linkedin', icon: LinkedinIcon, link: 'https://www.linkedin.com/in/marcial-rico-pozas-b2a4a51b0/' },
+    { name: 'Email', icon: GmailIcon, link: 'mailto:marshall6399@gmail.com' },
   ],
+};
+
+const content = {
+  content: 'This page was made using the React for Javascript and it serves as a presentation of myself and of all my work that I\'ve contributed or created . I hope you enjoy your visit and if you are interested there is information available regarding all my social and my email.',
 };
 
 export default function Blog() {
@@ -54,7 +59,7 @@ export default function Blog() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="About me"/>
+            <Main title="Welcome" content={content}/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}

@@ -43,7 +43,12 @@ const sidebar = {
   ],
 };
 
-export default function Blog() {
+const content = {
+  content: 'This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I hope you enjoy your visit and aasdasdsadad',
+};
+
+
+export default function Projects() {
   const classes = useStyles();
 
   return (
@@ -54,7 +59,7 @@ export default function Blog() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Projects"/>
+            <Main title="Projects" content={content}/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}

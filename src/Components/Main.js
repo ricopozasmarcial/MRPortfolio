@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 
 export default function Main(props) {
-  const { title } = props;
+  const { title, content } = props;
 
   return (
     <Grid item xs={12} md={8}>
@@ -13,6 +13,7 @@ export default function Main(props) {
         {title}
       </Typography>
       <Divider />
+        {content.content}
       
     </Grid>
   );
