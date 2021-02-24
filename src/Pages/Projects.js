@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import GmailIcon from '@material-ui/icons/Email';
 import Header from '../Components/Header';
 import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
@@ -26,9 +27,9 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Projects',
+  title: 'Marcial Rico Pozas',
   description:
-    "Here you will find a brief summary of my main projects that i've developed or helped developed.",
+    "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
  
 };
@@ -40,11 +41,12 @@ const sidebar = {
     { name: 'GitHub', icon: GitHubIcon , link: 'https://github.com/ricopozasmarcial' },
     { name: 'Twitter', icon: TwitterIcon, link: 'https://twitter.com/marchute99' },
     { name: 'Linkedin', icon: LinkedinIcon, link: 'https://www.linkedin.com/in/marcial-rico-pozas-b2a4a51b0/' },
+    { name: 'Email', icon: GmailIcon, link: 'mailto:marshall6399@gmail.com' },
   ],
 };
 
 const content = {
-  content: 'This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I hope you enjoy your visit and aasdasdsadad',
+  content: 'This is the list of my most relevant projects in which I\'ve been actively involved.',
 };
 
 

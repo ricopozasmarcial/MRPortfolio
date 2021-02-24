@@ -3,9 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import DownloadIcon from '@material-ui/icons/CloudDownload';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import Header from '../Components/Header';
 import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
@@ -34,17 +33,16 @@ const mainFeaturedPost = {
 };
 
 const sidebar = {
-  title: 'Social',
+  title: 'Resources',
 
   social: [
-    { name: 'GitHub', icon: GitHubIcon , link: 'https://github.com/ricopozasmarcial' },
-    { name: 'Twitter', icon: TwitterIcon, link: 'https://twitter.com/marchute99' },
+    { name: 'Download Curriculum Vitae', icon: DownloadIcon , link: 'CV_Rico-Pozas-Marcial.pdf' },
     { name: 'Linkedin', icon: LinkedinIcon, link: 'https://www.linkedin.com/in/marcial-rico-pozas-b2a4a51b0/' },
   ],
 };
 
 const content = {
-  content: 'This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I hope you enjoy your visit and aasdasdsadad',
+  content: 'This page displays some of my skills and capabilities in regards of software developing and other areas. Also you will have the option of downloading a copy of my CV.',
 };
 
 

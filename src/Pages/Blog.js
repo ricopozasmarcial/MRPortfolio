@@ -27,7 +27,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Marcial Rico Pozas\' Portfolio ' ,
+  title: 'Marcial Rico Pozas',
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',

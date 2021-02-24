@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
+import GmailIcon from '@material-ui/icons/Email';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Header from '../Components/Header';
 import MainFeaturedPost from '../Components/MainFeaturedPost';
@@ -26,9 +27,9 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'About me',
+  title: 'Marcial Rico Pozas',
   description:
-    "This section is dedicated to introduce myself and my passions, ambitions and aspirations",
+    "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
  
 };
@@ -40,11 +41,12 @@ const sidebar = {
     { name: 'GitHub', icon: GitHubIcon , link: 'https://github.com/ricopozasmarcial' },
     { name: 'Twitter', icon: TwitterIcon, link: 'https://twitter.com/marchute99' },
     { name: 'Linkedin', icon: LinkedinIcon, link: 'https://www.linkedin.com/in/marcial-rico-pozas-b2a4a51b0/' },
+    { name: 'Email', icon: GmailIcon, link: 'mailto:marshall6399@gmail.com' },
   ],
 };
 
 const content = {
-  content: 'This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I hope you enjoy your visit and aasdasdsadad',
+  content: 'Hi. My name is Marcial Rico Pozas and I\'m an undergraduated student currently studying Software Engineering at University de Oviedo. This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I\'ve always been interested in computers and how software was made since I was a little kid. I enrolled the degree of Software Engineering in hopes of dedicating my career toward something I always loved and I\'m on a journey of discovering what I\'m really passionate about. Some of my hobbies are PC Hardware in general, gaming, developing games and all kinds of VR software. I hope this little project helps you know me a little better and I hope you enjoy your visit.  ',
 };
 
 
