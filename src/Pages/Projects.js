@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-    { title: 'Home', url: '/#/Welcome' },
-    { title: 'About me', url: '/#/AboutMe' },
-    { title: 'Projects', url: '/#/Projects' },
-    { title: 'Aptitudes', url: '/#/Aptitudes' },
-  ];
+  { title: 'Home', url: '/MyReactPortFolio/#/Welcome' },
+  { title: 'About me', url: '/MyReactPortFolio/#/AboutMe' },
+  { title: 'Projects', url: '/MyReactPortFolio/#/Projects' },
+  { title: 'Aptitudes', url: '/MyReactPortFolio/#/Aptitudes' },
+];
 
 const mainFeaturedPost = {
   title: 'Projects',
