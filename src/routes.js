@@ -1,10 +1,10 @@
 import React from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import Blog from "./blog/Pages/Blog";
-import AboutMe from "./blog/Pages/AboutMe";
-import Aptitudes from "./blog/Pages/Aptitudes";
-import Projects from "./blog/Pages/Projects";
+import Blog from "./Pages/Blog";
+import AboutMe from "./Pages/AboutMe";
+import Aptitudes from "./Pages/Aptitudes";
+import Projects from "./Pages/Projects";
 const Routes = () => (
   <HashRouter>
     <div>
