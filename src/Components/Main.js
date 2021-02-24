@@ -5,16 +5,15 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 
 export default function Main(props) {
-  const { title, content } = props;
+  const { title, content, xs, md } = props;
 
   return (
-    <Grid item xs={12} md={8}>
+    <Grid item xs={xs} md={md}>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
       <Divider />
         {content.content}
-      
     </Grid>
   );
 }

@@ -61,7 +61,7 @@ export default function AboutMe() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="About me" content={content}/>
+            <Main title="About me" content={content}  xs = '12' md = '8'/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -71,7 +71,7 @@ export default function AboutMe() {
           </Grid>
         </main>
       </Container>
-      <Footer title="My Portfolio" description="Create with React by Marcial Rico Pozas" />
+      <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
     </React.Fragment>
   );
 }

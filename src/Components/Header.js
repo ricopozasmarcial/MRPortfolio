@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -42,16 +42,15 @@ export default function Header(props) {
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
         {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
+          <Button
             key={section.title}
-            variant="body2"
+            variant="outlined"
             href={section.url}
             className={classes.toolbarLink}
+            disableElevation
           >
             {section.title}
-          </Link>
+          </Button>
         ))}
       </Toolbar>
     </React.Fragment>
