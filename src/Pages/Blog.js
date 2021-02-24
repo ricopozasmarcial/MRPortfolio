@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'Home', url: '/MyReactPortFolio/#/Welcome' },
-  { title: 'About me', url: '/MyReactPortFolio/#/AboutMe' },
-  { title: 'Projects', url: '/MyReactPortFolio/#/Projects' },
-  { title: 'Aptitudes', url: '/MyReactPortFolio/#/Aptitudes' },
+  { title: 'Home', url: '/MyReactPortfolio/#/Welcome' },
+  { title: 'About me', url: '/MyReactPortfolio/#/AboutMe' },
+  { title: 'Projects', url: '/MyReactPortfolio/#/Projects' },
+  { title: 'Aptitudes', url: '/MyReactPortfolio/#/Aptitudes' },
 ];
 
 const mainFeaturedPost = {
