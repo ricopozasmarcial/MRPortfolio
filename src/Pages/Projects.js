@@ -8,6 +8,8 @@ import { GridList, GridListTile, GridListTileBar} from "@material-ui/core";
 import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
 import Footer from '../Components/Footer';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -39,44 +41,52 @@ const tileData = [
   {
     img: "Cynthia.png",
     title: "Cynthia",
-    id: "prueba4",
+    id: "item1",
+    link: "https://kryystinn.itch.io/cynthia",
     description: "UE4 Horror game"
   },
   {
     img: "AmongCars.jpeg",
     title: "Among Cars",
-    id: "prueba9",
+    id: "item2",
+    link: "https://github.com/ricopozasmarcial/AmongCars",
     description: "Unity VR Horror game"
   },
   {
     img: "NPC.png",
     title: "NPC Companion App",
-    id: "prueba13",
+    id: "item3",
+    link: "https://github.com/ricopozasmarcial/RAA-Proyecto-Individual",
     description: "AR App made with Unity+Vuforia"
   },
   {
     img: "Viade.png",
     title: "Viade es_1b",
-    id: "prueba17",
+    id: "item4",
+    link: "https://github.com/ricopozasmarcial/viade_es1b",
     description: "Route management app using React + Solid"
   },
   {
     img: "Ratattack.png",
     title: "RatAttack",
-    id: "prueba3",
+    id: "item5",
+    link: "https://github.com/ricopozasmarcial/RatAttack",
     description: "UE4 Adventure game"
   },
   {
     img: "Portfolio.png",
     title: "MyPortfolio",
-    id: "prueba16",
+    id: "item6",
+    link: "https://github.com/ricopozasmarcial/MyReactPortfolio",
     description: "Portfolio made with React"
   },
 ];
 
-const handleClick = (e) => {
+function open(e){
   
-};
+  window.open(e.link);
+}
+
 
 export default function Projects() {
   const classes = useStyles();
@@ -92,22 +102,32 @@ export default function Projects() {
             <Main title="Most relevant projects" content={content} xs = '12' md = '12'/>
           </Grid>
           <GridList
-            cols={4}
+            cellHeight = "250"
+            cols={3}
             className="third"
             >
-            {tileData.map((tile) => (
-              <GridListTile key={tile.img}>
+            {tileData.map((tile) => ( 
+              <GridListTile key={tile.img}> 
                 <img
                   src={tile.img}
                   alt={tile.title}
                   id={tile.id}
                   draggable="false"
+               
                 />
                 <GridListTileBar
                   title={tile.title}
                   subtitle={tile.description}
+                  actionIcon={
+                    <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                      <a href={tile.link}>
+                          <InfoIcon/>
+                      </a>
+                    </IconButton>
+                  }
                 />
               </GridListTile>
+              
             ))}
           </GridList>
         </main>

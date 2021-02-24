@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
-    overflowX: 'auto',
+    overflowX: 'hidden',
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -44,7 +44,6 @@ export default function Header(props) {
         {sections.map((section) => (
           <Button
             key={section.title}
-            variant="outlined"
             href={section.url}
             className={classes.toolbarLink}
             disableElevation
