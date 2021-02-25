@@ -7,8 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
- #back{
+ body{
     background-image: ${({ theme }) => theme.back};
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   #footer{
@@ -17,6 +21,10 @@ export const GlobalStyles = createGlobalStyle`
 
   #main {
     background: ${({ theme }) => theme.body};
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: ${({ theme }) => theme.text};
     display: flex;
     flex-direction: column;

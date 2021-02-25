@@ -9,7 +9,7 @@ import Projects from "../Pages/Projects";
 import Header from "../Components/Header";
 import MainFeaturedPost from "../Components/MainFeaturedPost";
 import Container from '@material-ui/core/Container';
-import {GreenDiv, style2, lightTheme, darkTheme} from '../Pages/Styles.style';
+import {GreenDiv, style2, lightTheme, darkTheme} from '../Pages/constants';
 import Footer from '../Components/Footer';
 import { Button } from '@material-ui/core';
 
@@ -31,7 +31,6 @@ export default function Frames() {
         <GlobalStyles/>
         <GreenDiv id="back">
             <Container maxWidth="lg" style={style2} id="main" >
-           
             <Header/>
             <Button onClick={toggleTheme}><a id="navtxt2">Toggle Dark Mode</a></Button>
             <MainFeaturedPost/>

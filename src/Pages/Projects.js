@@ -2,15 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Main from '../Components/Main';
-import Footer from '../Components/Footer';
 import GridComponent from '../Components/GridComponent';
-
-const useStyles = makeStyles((theme) => ({
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-  
-}));
+import {useStyles} from './constants';
 
 const content = {
   content: '',
@@ -70,7 +63,6 @@ export default function Projects() {
             <Main title="Most relevant projects" content={content}  xs = {12} md = {12}/>
           </Grid>
             <GridComponent tileData={tileData}/>
-          <Footer/>
         </main>
   );
 }

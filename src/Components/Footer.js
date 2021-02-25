@@ -8,26 +8,21 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: "lightgrey",
     padding: theme.spacing(2, 0),
-    position: "fixed",
+    position: "initial",
     left: "0",
     bottom: "0",
     right: "0",
     height: "50px",
-    width: "100%",
+    width: "auto",
     lineHeight: "30px",
-  },
-  phantom:{
-    display: 'block',
-    padding: '20px',
-    height: '60px',
-    width: '100%',
+    opacity: "70%",
   }
 }));
 
 export default function Footer(props) {
   const classes = useStyles();
   return (
-    <div className={classes.phantom}>
+   
     <footer className={classes.footer} id="footer">
       <Container maxWidth="lg">
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p" id="navtxt">
@@ -35,7 +30,7 @@ export default function Footer(props) {
         </Typography>
       </Container>
     </footer>
-    </div>
+   
   );
 }
 
