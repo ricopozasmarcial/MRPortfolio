@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import HomeIcon from '@material-ui/icons/Home';
+import AboutMeIcon from '@material-ui/icons/Person';
+import ProjectsIcon from '@material-ui/icons/Archive';
+import AptitudesIcon from '@material-ui/icons/Book';
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     overflowX: 'hidden',
   },
   toolbarLink: {
@@ -23,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'Home', url: '/MRPortfolio/#/Welcome' },
-  { title: 'About me', url: '/MRPortfolio/#/AboutMe' },
-  { title: 'Projects', url: '/MRPortfolio/#/Projects' },
-  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' },
+  { title: 'Home', url: '/MRPortfolio/#/Welcome' , icon: <HomeIcon/> },
+  { title: 'About me', url: '/MRPortfolio/#/AboutMe' , icon: <AboutMeIcon/> },
+  { title: 'Projects', url: '/MRPortfolio/#/Projects' , icon: <ProjectsIcon/> },
+  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' , icon: <AptitudesIcon/> },
 ];
 
 export default function Header(props) {
@@ -45,13 +49,15 @@ export default function Header(props) {
          React Portfolio
         </Typography>
       </Toolbar>
-      <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+      <Toolbar component="nav"  className={classes.toolbarSecondary}>
         {sections.map((section) => (
           <Button
             key={section.title}
             href={section.url}
             className={classes.toolbarLink}
-            disableElevation
+          
+            endIcon={section.icon}
+            variant="outlined"
           >
             <a id="navtxt">{section.title}</a>
           </Button>

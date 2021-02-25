@@ -14,9 +14,7 @@ import Footer from '../Components/Footer';
 import { Button } from '@material-ui/core';
 
 export default function Frames() {
-
     const [theme, setTheme] = useState('light');
-
     const toggleTheme = () => {
       if (theme === 'light') {
         setTheme('dark');
@@ -32,7 +30,7 @@ export default function Frames() {
         <GreenDiv id="back">
             <Container maxWidth="lg" style={style2} id="main" >
             <Header/>
-            <Button onClick={toggleTheme}><a id="navtxt2">Toggle Dark Mode</a></Button>
+            <Button variant="outlined" onClick={toggleTheme}><a id="navtxt2">Toggle Dark Mode</a></Button>
             <MainFeaturedPost/>
                 <Switch>
                     <Route exact path="/Welcome" component={Blog} />

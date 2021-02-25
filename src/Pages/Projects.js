@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Main from '../Components/Main';
 import GridComponent from '../Components/GridComponent';
