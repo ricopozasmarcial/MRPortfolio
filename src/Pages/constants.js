@@ -32,7 +32,7 @@ export const GreenDiv = styled.body`
 
   export const lightTheme = {
     body: '#E2E2E2',
-    side: '#dbd9d9',
+    side: '#7ea8e6',
     text: '#363537',
     back: 'linear-gradient(to bottom right, grey, grey, lightgrey)',
     toggleBorder: '#FFF',
@@ -41,7 +41,7 @@ export const GreenDiv = styled.body`
   
   export const darkTheme = {
     body: '#363537',
-    side: '#525252',
+    side: '#e6957e',
     text: '#FAFAFA',
     back: 'linear-gradient(to bottom right, black, black, grey)',
     toggleBorder: '#6B8096',

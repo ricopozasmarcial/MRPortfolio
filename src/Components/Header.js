@@ -7,6 +7,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import AboutMeIcon from '@material-ui/icons/Person';
 import ProjectsIcon from '@material-ui/icons/Archive';
 import AptitudesIcon from '@material-ui/icons/Book';
+import MenuIcon from '@material-ui/icons/Menu';
+import Collapse from '@material-ui/core/Collapse';
 import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,16 +26,35 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  root: {
+    height: 180,
+  },
+  container: {
+    display: 'flex',
+  },
+  paper: {
+    margin: theme.spacing(1),
+  },
+  svg: {
+    width: 100,
+    height: 100,
+  },
+  polygon: {
+    fill: theme.palette.common.white,
+    stroke: theme.palette.divider,
+    strokeWidth: 1,
+  },
 }));
 
 const sections = [
-  { title: 'Home', url: '/MRPortfolio/#/Welcome' , icon: <HomeIcon/> },
-  { title: 'About me', url: '/MRPortfolio/#/AboutMe' , icon: <AboutMeIcon/> },
-  { title: 'Projects', url: '/MRPortfolio/#/Projects' , icon: <ProjectsIcon/> },
-  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' , icon: <AptitudesIcon/> },
+  { title: 'Home', url: '/MRPortfolio/#/Welcome' , icon: <HomeIcon id="icon"/> },
+  { title: 'About me', url: '/MRPortfolio/#/AboutMe' , icon: <AboutMeIcon id="icon"/> },
+  { title: 'Projects', url: '/MRPortfolio/#/Projects' , icon: <ProjectsIcon id="icon"/> },
+  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' , icon: <AptitudesIcon id="icon"/> },
 ];
 
 export default function Header(props) {
+
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -50,17 +71,15 @@ export default function Header(props) {
         </Typography>
       </Toolbar>
       <Toolbar component="nav"  className={classes.toolbarSecondary}>
-        {sections.map((section) => (
+        {sections.map((section) => (     
           <Button
             key={section.title}
             href={section.url}
             className={classes.toolbarLink}
-          
             endIcon={section.icon}
-            variant="outlined"
           >
             <a id="navtxt">{section.title}</a>
-          </Button>
+          </Button>    
         ))}
       </Toolbar>
     </React.Fragment>
