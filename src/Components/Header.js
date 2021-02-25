@@ -3,80 +3,14 @@ import HomeIcon from '@material-ui/icons/Home';
 import AboutMeIcon from '@material-ui/icons/Person';
 import ProjectsIcon from '@material-ui/icons/Archive';
 import AptitudesIcon from '@material-ui/icons/Book';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  makeStyles,
-  Button,
-  IconButton,
-  Drawer,
-  Link,
-  MenuItem,
-} from "@material-ui/core";
+import {Toolbar,makeStyles,Button,IconButton,Drawer,} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  toolbarTitle: {
-    flex: 1,
-  },
   toolbarSecondary: {
     justifyContent: 'space-around',
     overflowX: 'hidden',
-  },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-  },
-  root: {
-    height: 180,
-  },
-  container: {
-    display: 'flex',
-  },
-  paper: {
-    margin: theme.spacing(1),
-  },
-  svg: {
-    width: 100,
-    height: 100,
-  },
-  polygon: {
-    fill: theme.palette.common.white,
-    stroke: theme.palette.divider,
-    strokeWidth: 1,
-  },
-  header: {
-    backgroundColor: "#400CCC",
-    paddingRight: "79px",
-    paddingLeft: "118px",
-    "@media (max-width: 900px)": {
-      paddingLeft: 0,
-    },
-  },
-  logo: {
-    fontFamily: "Work Sans, sans-serif",
-    fontWeight: 600,
-    color: "#FFFEFE",
-    textAlign: "left",
-  },
-  menuButton: {
-    fontFamily: "Open Sans, sans-serif",
-    fontWeight: 700,
-    size: "18px",
-    marginLeft: "38px",
-  },
-  toolbar: {
-    display: "flex",
-    justifyContent: "space-around",
-  },
-  drawerContainer: {
-    padding: "20px 30px",
   },
 }));
 
@@ -88,8 +22,6 @@ const sections = [
 ];
 
 export default function Header(props) {
-
-  const { toolbar, drawerContainer } = useStyles();
 
   const [state, setState] = useState({
     mobileView: false,
@@ -148,12 +80,12 @@ export default function Header(props) {
         </IconButton>
         <Drawer
           {...{
-            anchor: "left",
+            anchor: "top",
             open: drawerOpen,
             onClose: handleDrawerClose,
           }}
-        >
-          <div className={drawerContainer}><ul style={{listStyle: "none"}}>{sections.map((section) => (     
+          >
+          <div id ="navLite"><ul style={{listStyle: "none"}}>{sections.map((section) => (     
             <li><Button
               key={section.title}
               href={section.url}
@@ -171,18 +103,6 @@ export default function Header(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Toolbar className={classes.toolbar}>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          className={classes.toolbarTitle}
-        >
-         React Portfolio
-        </Typography>
-      </Toolbar>
       <Toolbar component="nav"  className={classes.toolbarSecondary}>
       {mobileView ? displayMobile() : displayDesktop()}
       </Toolbar>
