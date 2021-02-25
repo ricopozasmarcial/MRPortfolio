@@ -1,14 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Header from '../Components/Header';
-import { GridList, GridListTile, GridListTileBar} from "@material-ui/core";
-import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
 import Footer from '../Components/Footer';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import GridComponent from '../Components/GridComponent';
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -16,21 +11,6 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-
-const sections = [
-  { title: 'Home', url: '/MRPortfolio/#/Welcome' },
-  { title: 'About me', url: '/MRPortfolio/#/AboutMe' },
-  { title: 'Projects', url: '/MRPortfolio/#/Projects' },
-  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' },
-];
-
-const mainFeaturedPost = {
-  title: 'Marcial Rico',
-  description:
-    "Undergraduated student currently studying Software Engineering at University of Oviedo",
-  image: 'https://source.unsplash.com/random',
- 
-};
 
 const content = {
   content: '',
@@ -81,66 +61,16 @@ const tileData = [
   },
 ];
 
-const style = {
-  backgroundImage: 'linear-gradient(to bottom right, lightblue, lightgreen, lightyellow)',
-  backgroundSize: "contain",
-  backgroundRepeat: "repeat",
-  zIndex:"99",
-  height: "100vh",
-};
-
-const style2 = {
-  backgroundColor: 'white',
-  backgroundSize: "cover",
-  backgroundRepeat: "repeat",
-  zIndex:"1",
-  borderRadius: "0 0 5px 5px",
-};
-
 export default function Projects() {
   const classes = useStyles();
 
   return (   
-    <div style={style}>
-      <Container maxWidth="lg" style={style2} >
-        <Header title="React Portfolio" sections={sections} />
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
             <Main title="Most relevant projects" content={content}  xs = {12} md = {12}/>
           </Grid>
-          <GridList
-            cellHeight = {180}
-            cols={3}
-            className="third"
-            >
-            {tileData.map((tile) => ( 
-              <GridListTile key={tile.img}> 
-                <img
-                  src={tile.img}
-                  alt={tile.title}
-                  id={tile.id}
-                  draggable="false"
-                />
-                <GridListTileBar
-                  title={tile.title}
-                  subtitle={tile.description}
-                  actionIcon={
-                    <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                      <a href={tile.link}>
-                          <InfoIcon/>
-                      </a>
-                    </IconButton>
-                  }
-                />
-              </GridListTile>
-              
-            ))}
-            
-          </GridList>
-          <Footer description="Created with React by Marcial Rico Pozas" />
+            <GridComponent tileData={tileData}/>
+          <Footer/>
         </main>
-      </Container>
-    </div>
   );
 }

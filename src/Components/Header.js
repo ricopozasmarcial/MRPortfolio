@@ -22,10 +22,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const sections = [
+  { title: 'Home', url: '/MRPortfolio/#/Welcome' },
+  { title: 'About me', url: '/MRPortfolio/#/AboutMe' },
+  { title: 'Projects', url: '/MRPortfolio/#/Projects' },
+  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' },
+];
+
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, title } = props;
-
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
@@ -37,7 +42,7 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-          {title}
+         React Portfolio
         </Typography>
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
@@ -48,7 +53,7 @@ export default function Header(props) {
             className={classes.toolbarLink}
             disableElevation
           >
-            {section.title}
+            <a id="navtxt">{section.title}</a>
           </Button>
         ))}
       </Toolbar>

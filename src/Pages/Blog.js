@@ -1,13 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedinIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GmailIcon from '@material-ui/icons/Email';
-import Header from '../Components/Header';
-import MainFeaturedPost from '../Components/MainFeaturedPost';
 import Main from '../Components/Main';
 import Sidebar from '../Components/Sidebar';
 import Footer from '../Components/Footer';
@@ -18,20 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const sections = [
-  { title: 'Home', url: '/MRPortfolio/#/Welcome' },
-  { title: 'About me', url: '/MRPortfolio/#/AboutMe' },
-  { title: 'Projects', url: '/MRPortfolio/#/Projects' },
-  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' },
-];
 
-const mainFeaturedPost = {
-  title: 'Marcial Rico',
-  description:
-    "Undergraduated student currently studying Software Engineering at University of Oviedo",
-  image: 'https://source.unsplash.com/random',
- 
-};
 
 const sidebar = {
   title: 'Social',
@@ -47,43 +31,20 @@ const content = {
   content: 'This page was made using the React for Javascript and it serves as a presentation of myself and of all my work that I\'ve contributed or created . I hope you enjoy your visit and if you are interested there is information available regarding all my social and my email.',
 };
 
-const style = {
-  backgroundImage: 'linear-gradient(to bottom right, lightblue, lightgreen, lightyellow)',
-  backgroundSize: "contain",
-  backgroundRepeat: "repeat",
-  zIndex:"99",
-  height: "100vh",
-};
-
-const style2 = {
-  backgroundColor: 'white',
-  backgroundSize: "cover",
-  backgroundRepeat: "repeat",
-  zIndex:"1",
-  borderRadius: "0 0 5px 5px",
-};
-
 export default function Blog() {
   const classes = useStyles();
-
   return ( 
-    <div style={style}>    
-      <Container maxWidth="lg" style={style2} >
-        <Header title="React Portfolio" sections={sections}  />
-        <main >
-          <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Welcome" content={content}  xs = {12} md = {8}/>
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-             <Footer description="Created with React by Marcial Rico Pozas" />
-          </Grid>   
-        </main>     
-      </Container>
-    </div>
+    <main >
+      <Grid container spacing={5} className={classes.mainGrid}>
+        <Main title="Welcome" content={content}  xs = {12} md = {8}/>
+        <Sidebar
+          title={sidebar.title}
+          description={sidebar.description}
+          archives={sidebar.archives}
+          social={sidebar.social}
+        />
+        <Footer/>
+      </Grid>   
+    </main>
   );
 }

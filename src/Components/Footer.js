@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "lightgrey",
     padding: theme.spacing(2, 0),
     position: "fixed",
     left: "0",
@@ -26,17 +26,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer(props) {
   const classes = useStyles();
-  const { description, title } = props;
-
   return (
     <div className={classes.phantom}>
-    <footer className={classes.footer}>
+    <footer className={classes.footer} id="footer">
       <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
-          {title}
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          {description}
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p" id="navtxt">
+            Created with React by Marcial Rico Pozas 
         </Typography>
       </Container>
     </footer>

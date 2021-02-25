@@ -23,12 +23,12 @@ export default function Sidebar(props) {
 
   return (
     <Grid item xs={12} md={4}>
-      <Paper elevation={0} className={classes.sidebarAboutBox}>
-        <Typography variant="h6" gutterBottom>
+      <Paper elevation={0} className={classes.sidebarAboutBox} id="sidebar">
+        <Typography variant="h6" gutterBottom id="navtxt">
           {title}
         </Typography>
         {social.map((network) => (
-        <Link display="block" variant="body1" href={network.link} download key={network.name}>
+        <Link display="block" variant="body1" href={network.link} download key={network.name} id="navtxt">
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
               <network.icon />

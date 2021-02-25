@@ -36,9 +36,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const post = {
+  title: 'Marcial Rico',
+  description:
+    "Undergraduated student currently studying Software Engineering at University of Oviedo",
+  image: 'https://source.unsplash.com/random',
+ 
+};
+
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
-  const { post } = props;
 
   return (
     <Paper className={classes.mainFeaturedPost} >
