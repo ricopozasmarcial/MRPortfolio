@@ -34,7 +34,7 @@ export const GreenDiv = styled.body`
     body: '#E2E2E2',
     side: '#7ea8e6',
     text: '#363537',
-    back: 'linear-gradient(to bottom right, grey, grey, lightgrey)',
+    back: 'linear-gradient(to bottom right,#7ea8e6,#7ea8e6, lightgrey, lightgrey)',
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
   }
@@ -43,7 +43,7 @@ export const GreenDiv = styled.body`
     body: '#363537',
     side: '#e6957e',
     text: '#FAFAFA',
-    back: 'linear-gradient(to bottom right, black, black, grey)',
+    back: 'linear-gradient(to bottom right, black, black, #e6957e)',
     toggleBorder: '#6B8096',
     gradient: 'linear-gradient(#091236, #1E215D)',
   }
