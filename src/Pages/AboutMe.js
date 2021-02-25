@@ -9,7 +9,8 @@ import GmailIcon from '@material-ui/icons/Email';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Header from '../Components/Header';
 import MainFeaturedPost from '../Components/MainFeaturedPost';
-import Main from '../Components/Main';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
 import Sidebar from '../Components/Sidebar';
 import Footer from '../Components/Footer';
 
@@ -27,7 +28,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Marcial Rico Pozas',
+  title: 'Marcial Rico',
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
@@ -45,33 +46,47 @@ const sidebar = {
   ],
 };
 
-const content = {
-  content: 'Hi. My name is Marcial Rico Pozas and I\'m an undergraduated student currently studying Software Engineering at University de Oviedo. This site was made as a showcase of who I am and what are my capabilities and projects i\'ve been a part of. I\'ve always been interested in computers and how software was made since I was a little kid. I enrolled the degree of Software Engineering in hopes of dedicating my career toward something I always loved and I\'m on a journey of discovering what I\'m really passionate about. Some of my hobbies are PC Hardware in general, gaming, developing games and all kinds of VR software. I hope this little project helps you know me a little better and I hope you enjoy your visit.  ',
-};
-
-
 export default function AboutMe() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <CssBaseline />
+    
       <Container maxWidth="lg">
-        <Header title="Portfolio" sections={sections} />
+        <Header title="React Portfolio" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="About me" content={content}  xs = '12' md = '8'/>
+            <Grid item xs={12} md={8}>
+                <Typography variant="h6" gutterBottom>
+                  About me
+                </Typography>
+                <Divider />
+                    <a>Hello. My name is Marcial Rico Pozas and I'm an undergraduated 
+                    student currently studying Software Engineering at University de Oviedo. 
+                    This site was made as a showcase of who I am and what are my capabilities 
+                    and projects I've been a part of.</a> 
+                    
+                    <a>I've always been interested in computers 
+                    and how software was made since I was a little kid. I enrolled the degree of 
+                    Software Engineering in hopes of dedicating my career toward something I always 
+                    loved and I'm on a journey of discovering what I'm really passionate about. 
+                    Some of my hobbies are PC Hardware in general, gaming, developing games and all 
+                    kinds of VR software. I hope this little project helps you know me a little better 
+                    and I hope you enjoy your visit.</a>
+            </Grid>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
+             <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
           </Grid>
         </main>
+       
       </Container>
-      <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
+     
     </React.Fragment>
   );
 }

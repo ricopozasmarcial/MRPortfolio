@@ -25,7 +25,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Marcial Rico Pozas',
+  title: 'Marcial Rico',
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
@@ -51,9 +51,9 @@ export default function Aptitudes() {
 
   return (
     <React.Fragment>
-      <CssBaseline />
+     
       <Container maxWidth="lg">
-        <Header title="Portfolio" sections={sections} />
+        <Header title="React Portfolio" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
@@ -64,10 +64,11 @@ export default function Aptitudes() {
               archives={sidebar.archives}
               social={sidebar.social}
             />
+              <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
           </Grid>
         </main>
       </Container>
-      <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
+    
     </React.Fragment>
   );
 }

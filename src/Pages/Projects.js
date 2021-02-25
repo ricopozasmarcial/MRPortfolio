@@ -26,7 +26,7 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Marcial Rico Pozas',
+  title: 'Marcial Rico',
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
@@ -82,27 +82,21 @@ const tileData = [
   },
 ];
 
-function open(e){
-  
-  window.open(e.link);
-}
-
-
 export default function Projects() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <CssBaseline />
+    
       <Container maxWidth="lg">
-        <Header title="Portfolio" sections={sections} />
+        <Header title="React Portfolio" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
             <Main title="Most relevant projects" content={content} xs = '12' md = '12'/>
           </Grid>
           <GridList
-            cellHeight = "250"
+            cellHeight = "180"
             cols={3}
             className="third"
             >
@@ -113,7 +107,6 @@ export default function Projects() {
                   alt={tile.title}
                   id={tile.id}
                   draggable="false"
-               
                 />
                 <GridListTileBar
                   title={tile.title}
@@ -129,10 +122,12 @@ export default function Projects() {
               </GridListTile>
               
             ))}
+            
           </GridList>
+          <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
         </main>
       </Container>
-      <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
+      
     </React.Fragment>
   );
 }

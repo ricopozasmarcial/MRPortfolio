@@ -7,13 +7,14 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6, 0),
-    position: "initial",
+    padding: theme.spacing(2, 0),
+    position: "fixed",
     left: "0",
     bottom: "0",
     right: "0",
-    height: "auto",
-    width: "100%"
+    height: "100px",
+    width: "100%",
+    lineHeight: "60px",
   },
   phantom:{
     display: 'block',

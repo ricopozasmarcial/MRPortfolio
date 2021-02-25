@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),
     backgroundColor: theme.palette.grey[200],
+    opacity: '100%',
   },
   sidebarSection: {
     marginTop: theme.spacing(3),

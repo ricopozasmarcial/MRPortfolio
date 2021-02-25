@@ -20,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'Home', url: '/MyReactPortfolio/#/Welcome' },
-  { title: 'About me', url: '/MyReactPortfolio/#/AboutMe' },
-  { title: 'Projects', url: '/MyReactPortfolio/#/Projects' },
-  { title: 'Aptitudes', url: '/MyReactPortfolio/#/Aptitudes' },
+  { title: 'Home', url: '/MRPortfolio/#/Welcome' },
+  { title: 'About me', url: '/MRPortfolio/#/AboutMe' },
+  { title: 'Projects', url: '/MRPortfolio/#/Projects' },
+  { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' },
 ];
 
 const mainFeaturedPost = {
-  title: 'Marcial Rico Pozas',
+  title: 'Marcial Rico',
   description:
     "Undergraduated student currently studying Software Engineering at University of Oviedo",
   image: 'https://source.unsplash.com/random',
@@ -52,11 +52,11 @@ export default function Blog() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Portfolio" sections={sections} />
-        <main>
+    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, height: `100vh` }}>
+     
+      <Container>
+        <Header title="React Portfolio" sections={sections}  />
+        <main >
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
             <Main title="Welcome" content={content}  xs = '12' md = '8'/>
@@ -66,10 +66,13 @@ export default function Blog() {
               archives={sidebar.archives}
               social={sidebar.social}
             />
+             <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
           </Grid>
+         
         </main>
+       
       </Container>
-      <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
-    </React.Fragment>
+     
+    </div>
   );
 }
