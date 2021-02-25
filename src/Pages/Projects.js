@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Header from '../Components/Header';
@@ -82,22 +81,36 @@ const tileData = [
   },
 ];
 
+const style = {
+  backgroundImage: 'linear-gradient(to bottom right, lightblue, lightgreen, lightyellow)',
+  backgroundSize: "contain",
+  backgroundRepeat: "repeat",
+  zIndex:"99",
+  height: "100vh",
+};
+
+const style2 = {
+  backgroundColor: 'white',
+  backgroundSize: "cover",
+  backgroundRepeat: "repeat",
+  zIndex:"1",
+  borderRadius: "0 0 5px 5px",
+};
+
 export default function Projects() {
   const classes = useStyles();
 
-  return (
-    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
-    
-    
-      <Container maxWidth="lg">
+  return (   
+    <div style={style}>
+      <Container maxWidth="lg" style={style2} >
         <Header title="React Portfolio" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Most relevant projects" content={content} xs = '12' md = '12'/>
+            <Main title="Most relevant projects" content={content}  xs = {12} md = {12}/>
           </Grid>
           <GridList
-            cellHeight = "180"
+            cellHeight = {180}
             cols={3}
             className="third"
             >
@@ -125,11 +138,9 @@ export default function Projects() {
             ))}
             
           </GridList>
-          <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
+          <Footer description="Created with React by Marcial Rico Pozas" />
         </main>
       </Container>
-      
-    
     </div>
   );
 }

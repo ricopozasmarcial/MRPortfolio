@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
     left: "0",
     bottom: "0",
     right: "0",
-    height: "70px",
+    height: "50px",
     width: "100%",
-    lineHeight: "60px",
+    lineHeight: "30px",
   },
   phantom:{
     display: 'block',

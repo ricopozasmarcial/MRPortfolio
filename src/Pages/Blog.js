@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -48,31 +47,43 @@ const content = {
   content: 'This page was made using the React for Javascript and it serves as a presentation of myself and of all my work that I\'ve contributed or created . I hope you enjoy your visit and if you are interested there is information available regarding all my social and my email.',
 };
 
+const style = {
+  backgroundImage: 'linear-gradient(to bottom right, lightblue, lightgreen, lightyellow)',
+  backgroundSize: "contain",
+  backgroundRepeat: "repeat",
+  zIndex:"99",
+  height: "100vh",
+};
+
+const style2 = {
+  backgroundColor: 'white',
+  backgroundSize: "cover",
+  backgroundRepeat: "repeat",
+  zIndex:"1",
+  borderRadius: "0 0 5px 5px",
+};
+
 export default function Blog() {
   const classes = useStyles();
 
-  return (
-    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
-     
-      <Container>
+  return ( 
+    <div style={style}>    
+      <Container maxWidth="lg" style={style2} >
         <Header title="React Portfolio" sections={sections}  />
         <main >
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Welcome" content={content}  xs = '12' md = '8'/>
+            <Main title="Welcome" content={content}  xs = {12} md = {8}/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
-             <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
-          </Grid>
-         
-        </main>
-       
+             <Footer description="Created with React by Marcial Rico Pozas" />
+          </Grid>   
+        </main>     
       </Container>
-     
     </div>
   );
 }

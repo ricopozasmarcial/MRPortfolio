@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import DownloadIcon from '@material-ui/icons/CloudDownload';
@@ -45,30 +44,43 @@ const content = {
   content: 'This page displays some of my skills and capabilities in regards of software developing and other areas. Also you will have the option of downloading a copy of my CV.',
 };
 
+const style = {
+  backgroundImage: 'linear-gradient(to bottom right, lightblue, lightgreen, lightyellow)',
+  backgroundSize: "contain",
+  backgroundRepeat: "repeat",
+  zIndex:"99",
+  height: "100vh",
+};
+
+const style2 = {
+  backgroundColor: 'white',
+  backgroundSize: "cover",
+  backgroundRepeat: "repeat",
+  zIndex:"1",
+  borderRadius: "0 0 5px 5px",
+};
 
 export default function Aptitudes() {
   const classes = useStyles();
 
   return (
-    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
-     
-      <Container maxWidth="lg">
+    <div style={style}>
+      <Container maxWidth="lg" style={style2} >
         <Header title="React Portfolio" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Aptitudes, skills and qualifications" content={content}  xs = '12' md = '8'/>
+            <Main title="Aptitudes, skills and qualifications" content={content}  xs = {12} md = {8}/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
             />
-              <Footer title="My Portfolio" description="Created with React by Marcial Rico Pozas" />
+              <Footer  description="Created with React by Marcial Rico Pozas" />
           </Grid>
         </main>
       </Container>
-    
     </div>
   );
 }
