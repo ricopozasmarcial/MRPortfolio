@@ -14,7 +14,7 @@ import Projects from "../Pages/Projects";
 import MainFeaturedPost from "../Components/MainFeaturedPost";
 import Container from '@material-ui/core/Container';
 import {GreenDiv, style2, lightTheme, darkTheme} from '../Pages/constants';
-import {Toolbar,makeStyles,Button,IconButton,Drawer,} from "@material-ui/core";
+import {Toolbar,makeStyles,Button,IconButton,Drawer,AppBar} from "@material-ui/core";
 import Footer from '../Components/Footer';
 import MoonIcon from '@material-ui/icons/NightsStay';
 
@@ -81,6 +81,7 @@ export default function Frames() {
       setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
     return (
+      <AppBar position="static" id="main">
       <Toolbar>
         <IconButton
           {...{
@@ -89,6 +90,7 @@ export default function Frames() {
             "aria-label": "menu",
             "aria-haspopup": "true",
             onClick: handleDrawerOpen,
+            id :"icon",
           }}
         >
           <MenuIcon />
@@ -124,6 +126,7 @@ export default function Frames() {
           </div>
         </Drawer> 
       </Toolbar>
+      </AppBar>
     );
   };
   const [theme, setTheme] = useState('light');
