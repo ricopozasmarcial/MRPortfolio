@@ -86,7 +86,8 @@ export default function Projects() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
+    
     
       <Container maxWidth="lg">
         <Header title="React Portfolio" sections={sections} />
@@ -128,6 +129,7 @@ export default function Projects() {
         </main>
       </Container>
       
-    </React.Fragment>
+    
+    </div>
   );
 }

@@ -52,7 +52,7 @@ export default function Blog() {
   const classes = useStyles();
 
   return (
-    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, height: `100vh` }}>
+    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
      
       <Container>
         <Header title="React Portfolio" sections={sections}  />

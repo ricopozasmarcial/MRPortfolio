@@ -50,7 +50,7 @@ export default function Aptitudes() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div style={{ backgroundImage: `linear-gradient(to bottom right, lightblue, lightgreen)`, backgroundRepeat: `repeat`,backgroundAttachment: `fixed`, height:`100vh` }}>
      
       <Container maxWidth="lg">
         <Header title="React Portfolio" sections={sections} />
@@ -69,6 +69,6 @@ export default function Aptitudes() {
         </main>
       </Container>
     
-    </React.Fragment>
+    </div>
   );
 }
