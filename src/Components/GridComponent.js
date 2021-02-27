@@ -6,8 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme) => ({
-    mainGrid: {
-        marginTop: theme.spacing(3),
+      styleGrid :{
+        borderRadius: "15px 155px 5px 5px",
       },
 }));
 
@@ -36,11 +36,11 @@ export default function Grid(props) {
     return (
       <GridList
       cellHeight = {180}
-      cols={3}
+      cols={4}
       className="third"
       >
       {tileData.map((tile) => ( 
-        <GridListTile key={tile.img}> 
+        <GridListTile key={tile.img} className={classes.styleGrid}> 
           <img
             src={tile.img}
             alt={tile.title}
@@ -59,9 +59,7 @@ export default function Grid(props) {
             }
           />
         </GridListTile>
-        
       ))}
-      
     </GridList>
     );
   };
@@ -100,9 +98,7 @@ export default function Grid(props) {
   return (
     <React.Fragment>
       {mobileView ? displayMobile() : displayDesktop()}
-    </React.Fragment>
-               
-   
+    </React.Fragment>      
   );
 }
 

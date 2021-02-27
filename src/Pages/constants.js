@@ -31,10 +31,10 @@ export const GreenDiv = styled.body`
   };
 
   export const lightTheme = {
-    body: '#E2E2E2',
+    body: '#f7ffff',
     side: '#7ea8e6',
     text: '#363537',
-    back: 'linear-gradient(to bottom right,#7ea8e6,#7ea8e6, lightgrey, lightgrey)',
+    back: 'linear-gradient(to bottom right, #e6fafa, #e6fafa,#7ea8e6)',
     toggleBorder: '#FFF',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
   }

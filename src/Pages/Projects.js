@@ -32,7 +32,7 @@ const tileData = [
   },
   {
     img: "Viade.png",
-    title: "Viade es_1b",
+    title: "Viade",
     id: "item4",
     link: "https://github.com/ricopozasmarcial/viade_es1b",
     description: "Route management app using React + Solid"
@@ -46,10 +46,17 @@ const tileData = [
   },
   {
     img: "Portfolio.png",
-    title: "MyPortfolio",
+    title: "Portfolio",
     id: "item6",
     link: "https://github.com/ricopozasmarcial/MyReactPortfolio",
     description: "Portfolio made with React"
+  },
+  {
+    img: "Vajilla.png",
+    title: "Nuria Pozas custom crockery",
+    id: "item6",
+    link: " https://github.com/ricopozasmarcial/nuriapozas.git",
+    description: "Shopping app made with React"
   },
 ];
 

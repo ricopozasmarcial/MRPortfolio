@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
-    box-shadow: 2px 3px 3px  rgba(0,0,0,0.5);
+    box-shadow: 2px 3px 3px  rgba(0,0,0,0.2);
   }
   #navtxt, #navtxt2, #navtxt4 {
     color: ${({ theme }) => theme.text};

@@ -20,9 +20,7 @@ import MoonIcon from '@material-ui/icons/NightsStay';
 
 const useStyles = makeStyles(() => ({
   toolbarSecondary: {
-    justifyContent: 'space-around',
-    overflowX: 'hidden',
-    width: '50',
+    justifyContent: 'space-between',
   },
 }));
 
@@ -66,10 +64,12 @@ export default function Frames() {
             <a id="navtxt">{section.title}</a>
           </Button>    
         ))} 
+         </div>
           <Button variant="outlined" onClick={toggleTheme} startIcon={<MoonIcon id="icon"/>}>
             <a id="navtxt2">Toggle Dark Mode</a>
           </Button>
-        </div>
+       
+       
       </Toolbar>
     );
   };
@@ -81,7 +81,7 @@ export default function Frames() {
       setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
     return (
-      <AppBar position="static" id="main">
+      <AppBar position="static" id="main" style={{boxShadow: '2px 3px 3px  rgba(0,0,0,0)'}}>
       <Toolbar>
         <IconButton
           {...{
@@ -103,6 +103,7 @@ export default function Frames() {
           }}
           >
           <div id ="navLite">
+          
             <ul style={{listStyle: "none"}}>{sections.map((section) => (     
               <li>
                 <Button
@@ -123,6 +124,7 @@ export default function Frames() {
                 </Button>
               </li>
             </ul> 
+           
           </div>
         </Drawer> 
       </Toolbar>
