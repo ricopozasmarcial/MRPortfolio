@@ -13,7 +13,7 @@ export default function Aptitudes() {
   return (   
     <main>
       <Grid container spacing={5} className={classes.mainGrid}>
-        <Main title="Aptitudes, skills and qualifications" content={content}  xs = {12} md = {8}/>
+        <Main title="Aptitudes, skills and qualifications" content={content} xs = {12} md = {8}/>
         <Sidebar
           title={resourcesSideBar.title}
           description={resourcesSideBar.description}

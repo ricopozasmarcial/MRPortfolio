@@ -5,7 +5,7 @@ import Sidebar from '../Components/Sidebar';
 import {socialSideBar, useStyles} from './constants';
 
 const content = {
-  content: 'This page was made using the React for Javascript and it serves as a presentation of myself and of all my work that I\'ve contributed or created . I hope you enjoy your visit and if you are interested there is information available regarding all my social and my email.',
+  content: 'This page was made using the React for Javascript and it serves as a presentation of myself and of all my work that I\'ve contributed creating or created. I hope you enjoy your visit and if you are interested there is information available regarding all my social and my email.',
 };
 
 export default function Blog() {

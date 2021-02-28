@@ -61,7 +61,8 @@ export const GreenDiv = styled.body`
   export const resourcesSideBar = {
     title: 'Resources',
     social: [
-      { name: 'Download Curriculum Vitae', icon: DownloadIcon , link: 'CV_Rico-Pozas-Marcial.pdf' },
+      { name: 'Download Curriculum Vitae ES', icon: DownloadIcon , link: 'CV_Rico-Pozas-Marcial_ES.pdf' },
+      { name: 'Download Curriculum Vitae EN', icon: DownloadIcon , link: 'CV_Rico-Pozas-Marcial_EN.pdf' },
       { name: 'Linkedin', icon: LinkedinIcon, link: 'https://www.linkedin.com/in/marcial-rico-pozas-b2a4a51b0/' },
     ],
   };
