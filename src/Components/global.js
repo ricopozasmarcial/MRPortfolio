@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.body};
   }
 
+  #aptitude {
+    max-width:30%;
+  } 
+
   #main {
     background: ${({ theme }) => theme.body};
     background-position: center center;

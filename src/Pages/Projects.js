@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Main from '../Components/Main';
 import GridComponent from '../Components/GridComponent';
-import {useStyles} from './constants';
+import {useStyles} from './Constants';
 
 const content = {
   content: '',

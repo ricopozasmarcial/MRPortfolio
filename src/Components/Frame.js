@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {GlobalStyles} from '../Components/global';
+import {GlobalStyles} from './Global';
 import { ThemeProvider } from 'styled-components';
 import { Switch, Route, Redirect } from "react-router-dom";
 import Blog from "../Pages/Blog";
@@ -13,7 +13,7 @@ import AptitudesIcon from '@material-ui/icons/Book';
 import Projects from "../Pages/Projects";
 import MainFeaturedPost from "../Components/MainFeaturedPost";
 import Container from '@material-ui/core/Container';
-import {GreenDiv, style2, lightTheme, darkTheme} from '../Pages/constants';
+import {GreenDiv, style2, lightTheme, darkTheme} from '../Pages/Constants';
 import {Toolbar,makeStyles,Button,IconButton,Drawer,AppBar} from "@material-ui/core";
 import Footer from '../Components/Footer';
 import MoonIcon from '@material-ui/icons/NightsStay';
@@ -54,7 +54,8 @@ export default function Frames() {
   const displayDesktop = () => {
     return (
       <Toolbar className={classes.toolbarSecondary}>
-        <div>{sections.map((section) => (     
+        <div>
+          {sections.map((section) => (     
           <Button
             key={section.title}
             href={section.url}

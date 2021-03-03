@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Main from '../Components/Main';
 import Sidebar from '../Components/Sidebar';
-import {socialSideBar, useStyles} from './constants';
+import {socialSideBar, useStyles} from './Constants';
 
 const content = {
   content: "Hello. My name is Marcial Rico Pozas and I'm an undergraduated student currently studying Software Engineering at University de Oviedo."
