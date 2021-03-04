@@ -62,12 +62,12 @@ export default function Frames() {
             className={classes.toolbarLink}
             startIcon={section.icon}
           >
-            <a id="navtxt">{section.title}</a>
+            <div id="navtxt" href="">{section.title}</div>
           </Button>    
         ))} 
          </div>
           <Button variant="outlined" onClick={toggleTheme} startIcon={<MoonIcon id="icon"/>}>
-            <a id="navtxt2">Toggle Dark Mode</a>
+            <div id="navtxt2" href="">Toggle Dark Mode</div>
           </Button>
        
        
@@ -113,19 +113,18 @@ export default function Frames() {
                   className={classes.toolbarLink}
                   startIcon={section.icon}
                   >
-                  <a id="navtxt">
+                  <div id="navtxt">
                     {section.title}
-                  </a>
+                  </div>
                 </Button>
               </li> 
               ))}
               <li>
                 <Button variant="outlined" onClick={toggleTheme} startIcon={<MoonIcon id="icon"/>}>
-                  <a id="navtxt2">Toggle Dark Mode</a>
+                   <div id="navtxt2">Toggle Dark Mode</div>
                 </Button>
               </li>
             </ul> 
-           
           </div>
         </Drawer> 
       </Toolbar>
