@@ -11,6 +11,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import ImageScroller from 'react-image-scroller';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Main(props) {
-  const { title, content, xs, md, isAptitude} = props;
+  const { title, content, xs, md, isAptitude, isWelcome} = props;
   const classes = useStyles();
   if(isAptitude){
     return (
@@ -151,14 +152,35 @@ export default function Main(props) {
     );
   }
 
+  if(isWelcome){
+    return (
+      <Grid item xs={xs} md={md}>
+        <Typography variant="h5" gutterBottom>
+          {title}
+        </Typography>
+        <Divider/>
+          <p>{content.content}</p><p><br></br>{content.content2}</p><p><br></br>{content.content3}</p><p><br></br>{content.content4}</p>  
+          <ImageScroller hideScrollbar={false} >
+            <img src="Pictures/Cynthia.png" alt="Second" />
+            <img src="Pictures/Entrevista.png" alt="Third" />
+            <img src="Pictures/Tpa.png" alt="Fourth" />
+            <img src="Pictures/Black&White.png" alt="First" />
+            <img src="Pictures/Perfil.jpg" alt="Fifth" />
+            <img src="Pictures/Traje.png" alt="Fifth" /> 
+          </ImageScroller>
+      </Grid>
+    );
+  }
+
   return (
     <Grid item xs={xs} md={md}>
       <Typography variant="h5" gutterBottom>
         {title}
       </Typography>
       <Divider/>
-        <p>{content.content}</p>  
+        <p>{content.content2}</p><p><br></br>{content.content3}</p><p><br></br>{content.content4}</p>  
     </Grid>
+    
   );
 }
 

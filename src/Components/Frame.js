@@ -3,11 +3,9 @@ import {GlobalStyles} from './Global';
 import { ThemeProvider } from 'styled-components';
 import { Switch, Route, Redirect } from "react-router-dom";
 import Blog from "../Pages/Blog";
-import AboutMe from "../Pages/AboutMe";
 import MenuIcon from "@material-ui/icons/Menu";
 import Aptitudes from "../Pages/Aptitudes";
 import HomeIcon from '@material-ui/icons/Home';
-import AboutMeIcon from '@material-ui/icons/Person';
 import ProjectsIcon from '@material-ui/icons/Archive';
 import AptitudesIcon from '@material-ui/icons/Book';
 import Projects from "../Pages/Projects";
@@ -26,7 +24,6 @@ const useStyles = makeStyles(() => ({
 
 const sections = [
   { title: 'Home', url: '/MRPortfolio/#/Welcome' , icon: <HomeIcon id="icon"/> },
-  { title: 'About me', url: '/MRPortfolio/#/AboutMe' , icon: <AboutMeIcon id="icon"/> },
   { title: 'Projects', url: '/MRPortfolio/#/Projects' , icon: <ProjectsIcon id="icon"/> },
   { title: 'Aptitudes', url: '/MRPortfolio/#/Aptitudes' , icon: <AptitudesIcon id="icon"/> },
 ];
@@ -151,13 +148,11 @@ export default function Frames() {
               <MainFeaturedPost/>
                 <Switch>
                     <Route exact path="/Welcome" component={Blog} />
-                    <Route exact path="/AboutMe" component={AboutMe} />
                     <Route exact path="/Projects" component={Projects} />
                     <Route exact path="/Aptitudes" component={Aptitudes} />
                     <Route exact path="/*" component={Blog} />
                     <Redirect to="/"></Redirect>
                 </Switch>
-                
                 <Footer/>
             </Container>
         </GreenDiv>
